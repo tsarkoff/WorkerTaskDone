@@ -1,7 +1,7 @@
 public class Worker {
-    static public final int TASK_FAILED_NUMBER = 33 - 1;
-    private OnTaskDoneListener callback;
-    private OnTaskErrorListener errorCallback;
+    private static final int TASK_FAILED_NUMBER = 33 - 1;
+    private final OnTaskDoneListener callback;
+    private final OnTaskErrorListener errorCallback;
 
     public Worker(OnTaskDoneListener callback, OnTaskErrorListener errorCallback) {
         this.callback = callback;
@@ -18,6 +18,6 @@ public class Worker {
         }
     }
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_RED = "\u001B[31m";
 }
